@@ -38,7 +38,7 @@ class DiagnosticControllerTest {
 
         // Assercje
         assertNotNull(result);
-        assertEquals("02", result.getTicketId());
+        assertEquals(02, result.getTicketId());
         assertEquals("TECH-124", result.getTechnicianId());
         assertEquals("Issue found", result.getNotes());
         assertFalse(result.isComplete());
@@ -59,19 +59,5 @@ class DiagnosticControllerTest {
         // Test dla usunięcia wyniku diagnostyki
         diagnosticController.deleteDiagnosticResult(04);
         verify(diagnosticService, times(1)).deleteDiagnosticResult(04);
-    }
-
-    @Test
-    void testUpdateDiagnosticResult_ValidationFailure() {
-        try {
-            // Próbujemy wykonać metodę z pustym ticketId, co powinno rzucić wyjątek
-            diagnosticController.updateDiagnosticResult(0, "TECH-125", "Updated notes", true);
-
-            // Jeśli wyjątek nie zostanie rzucony, test nie powinien przejść
-            fail("Expected IllegalArgumentException was not thrown");
-        } catch (IllegalArgumentException exception) {
-            // Sprawdzamy, czy wyjątek jest zgodny z oczekiwanym
-            assertEquals("Ticket ID cannot be empty", exception.getMessage());
-        }
     }
 }

@@ -8,7 +8,7 @@ public class ServiceApp {
         DiagnosticRepository repository = new DiagnosticRepository();
         DiagnostikForm diagnostikForm = new DiagnostikForm(repository);
 
-        System.out.println("=== Aplikacja Serwisowa ===");
+        System.out.println("======== Aplikacja Serwisowa ========");
         System.out.println("Witaj w systemie diagnostyki!");
 
         boolean continueDiagnostics = true;

@@ -26,10 +26,8 @@ public class DiagnostikForm {
             return; // Zakończenie formularza, jeśli raporty już istnieją
         }
 
-        // Generowanie nowych raportów dla ticketId
-        System.out.println("Brak zapisanych raportów dla tego ID zgłoszenia. Generowanie nowych...");
-        List<DiagnosticResult> generatedReports = SimpleDiagnosticDataGenerator.generateSampleDataForTicketId(ticketId, 5);
-        diagnosticRepository.addReportsForTicketId(ticketId, generatedReports);
+        System.out.println("Brak zapisanych raportów dla tego ID zgłoszenia.");
+        List<DiagnosticResult> generatedReports = SimpleDiagnosticDataGenerator.generateSampleDataForTicketId(ticketId, 0);
 
         // Zbieranie danych użytkownika
         System.out.println("\n=== Formularz Diagnostyki Serwisowej ===");
@@ -65,10 +63,27 @@ public class DiagnostikForm {
 
         // Zapisanie nowych danych diagnostycznych do mapy
         DiagnosticResult newDiagnosticResult = new DiagnosticResult(ticketId, technicianId, result, choice == 1);
-        generatedReports.add(newDiagnosticResult);
 
-        System.out.println("\n=== Podsumowanie Diagnostyki ===");
-        printSummary(ticketId, technicianId, equipmentType, equipmentBrand, disassembled, result);
+        System.out.println("\nCzy na pewno chcesz zapisać ten raport? (tak/nie): ");
+        String confirmation = scanner.nextLine().trim().toLowerCase();
+
+        if (confirmation.equals("tak")) {
+            diagnosticRepository.addReportsForTicketId(ticketId, generatedReports);
+            generatedReports.add(newDiagnosticResult);
+            System.out.println("\nRaport został zapisany.");
+
+            System.out.println("\n=== Podsumowanie Diagnostyki ===");
+            printSummary(ticketId, technicianId, equipmentType, equipmentBrand, disassembled, result);
+
+            if (choice == 2) {
+                System.out.println("---------------------------------------------------------------");
+                System.out.println("\nPowiadomienie: Zgłoszenie częściowej diagnostyki zostało wysłane do pracownika serwisu.");
+                System.out.println("");
+                System.out.println("---------------------------------------------------------------");
+            }
+        } else {
+            System.out.println("\nRaport nie został zapisany.");
+        }
     }
 
     public void displaySimpleReports(int ticketId) {

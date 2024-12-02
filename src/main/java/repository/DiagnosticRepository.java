@@ -18,14 +18,10 @@ public class DiagnosticRepository {
     static {
         for (int ticketId = 1; ticketId <= 3; ticketId++) {
             List<DiagnosticResult> reports = new ArrayList<>();
-
-            for (int j = 0; j < 3; j++) {
-                String technicianId = faker.idNumber().valid();
-                String result = faker.lorem().sentence();
-                boolean isComplete = faker.bool().bool();
-                reports.add(new DiagnosticResult(ticketId, technicianId, result, isComplete));
-            }
-
+            String technicianId = faker.idNumber().valid();
+            String result = faker.lorem().sentence();
+            boolean isComplete = faker.bool().bool();
+            reports.add(new DiagnosticResult(ticketId, technicianId, result, isComplete));
             ticketReportsMap.put(ticketId, reports);
         }
     }
