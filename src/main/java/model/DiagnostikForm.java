@@ -42,48 +42,78 @@ public class DiagnostikForm {
         System.out.println("Firma sprzętu: " + equipmentBrand);
         System.out.println("Opis problemu: " + equipmentDescription);
 
-        System.out.print("ID technika: ");
-        String technicianId = scanner.nextLine();
+        String technicianId;
+        String disassembled;
+        int choice;
+        String result;
 
-        System.out.print("Rodzaj sprzętu (jeśli nie znasz, wpisz 'inne'): ");
-        equipmentType = scanner.nextLine();
-
-        System.out.print("Firma sprzętu (jeśli nie znasz, wpisz 'nieznana'): ");
-        equipmentBrand = scanner.nextLine();
-
-        System.out.print("Czy technik musiał rozebrać sprzęt? (tak/nie): ");
-        String disassembled = scanner.nextLine();
-
-        System.out.print("Wybierz typ diagnostyki (1 - pełna, 2 - częściowa): ");
-        int choice = scanner.nextInt();
-        scanner.nextLine(); // Konsumowanie znaku nowej linii
-
-        System.out.print("Wyniki diagnostyki: ");
-        String result = scanner.nextLine();
-
-        // Zapisanie nowych danych diagnostycznych do mapy
-        DiagnosticResult newDiagnosticResult = new DiagnosticResult(ticketId, technicianId, result, choice == 1);
-
-        System.out.println("\nCzy na pewno chcesz zapisać ten raport? (tak/nie): ");
-        String confirmation = scanner.nextLine().trim().toLowerCase();
-
-        if (confirmation.equals("tak")) {
-            diagnosticRepository.addReportsForTicketId(ticketId, generatedReports);
-            generatedReports.add(newDiagnosticResult);
-            System.out.println("\nRaport został zapisany.");
-
-            System.out.println("\n=== Podsumowanie Diagnostyki ===");
-            printSummary(ticketId, technicianId, equipmentType, equipmentBrand, disassembled, result);
-
-            if (choice == 2) {
-                System.out.println("---------------------------------------------------------------");
-                System.out.println("\nPowiadomienie: Zgłoszenie częściowej diagnostyki zostało wysłane do pracownika serwisu.");
-                System.out.println("");
-                System.out.println("---------------------------------------------------------------");
+        while (true) {
+            System.out.print("ID technika: ");
+            technicianId = scanner.nextLine();
+            if (!validateTechnicianId(technicianId)) {
+                System.out.println("Nieprawidłowe ID technika. Spróbuj ponownie.");
+                continue; // Powrót do początku pętli
             }
-        } else {
-            System.out.println("\nRaport nie został zapisany.");
+
+            System.out.print("Rodzaj sprzętu (jeśli nie znasz, wpisz 'inne'): ");
+            equipmentType = scanner.nextLine();
+
+            System.out.print("Firma sprzętu (jeśli nie znasz, wpisz 'nieznana'): ");
+            equipmentBrand = scanner.nextLine();
+
+            System.out.print("Czy technik musiał rozebrać sprzęt? (tak/nie): ");
+            disassembled = scanner.nextLine();
+            if (!disassembled.equals("tak") && !disassembled.equals("nie")) {
+                System.out.println("Nieprawidłowa odpowiedź. Użyj 'tak' lub 'nie'. Spróbuj ponownie.");
+                continue; // Powrót do początku pętli
+            }
+
+            System.out.print("Wybierz typ diagnostyki (1 - pełna, 2 - częściowa): ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Konsumowanie znaku nowej linii
+
+            if (choice != 1 && choice != 2) {
+                System.out.println("Nieprawidłowy wybór. Użyj 1 lub 2. Spróbuj ponownie.");
+                continue; // Powrót do początku pętli
+            }
+
+            System.out.print("Wyniki diagnostyki: ");
+            result = scanner.nextLine();
+            if (result == null || result.trim().isEmpty()) {
+                System.out.println("Wynik diagnostyki nie może być pusty. Spróbuj ponownie.");
+                continue; // Powrót do początku pętli
+            }
+
+            // Zapisanie nowych danych diagnostycznych do mapy
+            DiagnosticResult newDiagnosticResult = new DiagnosticResult(ticketId, technicianId, result, choice == 1);
+
+            System.out.println("\nCzy na pewno chcesz zapisać ten raport? (tak/nie): ");
+            String confirmation = scanner.nextLine().trim().toLowerCase();
+
+            if (confirmation.equals("tak")) {
+                diagnosticRepository.addReportsForTicketId(ticketId, generatedReports);
+                generatedReports.add(newDiagnosticResult);
+                System.out.println("\nRaport został zapisany.");
+
+                System.out.println("\n=== Podsumowanie Diagnostyki ===");
+                printSummary(ticketId, technicianId, equipmentType, equipmentBrand, disassembled, result);
+
+                if (choice == 2) {
+                    System.out.println("---------------------------------------------------------------");
+                    System.out.println("\nPowiadomienie: Zgłoszenie częściowej diagnostyki zostało wysłane do pracownika serwisu.");
+                    System.out.println("");
+                    System.out.println("---------------------------------------------------------------");
+                }
+                break;
+            } else {
+                System.out.println("\nRaport nie został zapisany.");
+                break;
+            }
         }
+    }
+
+    private boolean validateTechnicianId(String technicianId) {
+        return technicianId != null && !technicianId.trim().isEmpty();
     }
 
     public void displaySimpleReports(int ticketId) {

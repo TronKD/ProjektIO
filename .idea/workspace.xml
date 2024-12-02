@@ -6,24 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f838ed5-078d-4592-a007-741e481f5c0b" name="Changes" comment="ProjektIO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/DiagnostikForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DiagnostikForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/DiagnosticRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/DiagnosticRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DiagnosticResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/DiagnosticResultRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DiagnosticResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DiagnosticService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/controller/DiagnosticControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/controller/DiagnosticControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/model/DiagnostikFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/model/DiagnostikFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/service/DiagnosticServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/service/DiagnosticServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DiagnosticController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DiagnosticController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/DiagnostikForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DiagnostikForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/DiagnosticRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/DiagnosticRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/DiagnosticResultRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/DiagnosticResultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DiagnosticResultService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/DiagnosticService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DiagnosticService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/DiagnosticControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/DiagnosticServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/FormDiagnostikTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +54,9 @@
     "JUnit.DiagnosticServiceTest.testFullDiagnosticFlow.executor": "Run",
     "JUnit.DiagnosticServiceTest.testGetDiagnosticResult.executor": "Run",
     "JUnit.DiagnosticServiceTest.testPerformFullDiagnostic.executor": "Run",
+    "JUnit.DiagnostikFormTest.executor": "Run",
+    "JUnit.DiagnostikFormTest.testStartDiagnosticFormFullDiagnostic.executor": "Run",
+    "JUnit.DiagnostikFormTest.testStartDiagnosticFormPartialDiagnostic.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
