@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f838ed5-078d-4592-a007-741e481f5c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ServiceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DiagnosticResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DiagnostikForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/SimpleDiagnosticDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/DiagnosticRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticReportPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticResultRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticResultService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unit/DiagnosticControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unit/DiagnosticServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unit/DiagnostikFormTest.java" afterDir="false" />
+    <list default="true" id="6f838ed5-078d-4592-a007-741e481f5c0b" name="Changes" comment="ProjektIO">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,12 +78,12 @@
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit.*" />
+          <option name="PATTERN" value="unit.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unit" />
-      <option name="MAIN_CLASS_NAME" value="unit.DiagnosticControllerTest" />
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.DiagnosticControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,12 +93,12 @@
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit.*" />
+          <option name="PATTERN" value="unit.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unit" />
-      <option name="MAIN_CLASS_NAME" value="unit.DiagnosticControllerTest" />
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.DiagnosticControllerTest" />
       <option name="METHOD_NAME" value="testGetDiagnosticResult_NotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -129,12 +109,12 @@
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit.*" />
+          <option name="PATTERN" value="unit.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unit" />
-      <option name="MAIN_CLASS_NAME" value="unit.DiagnosticControllerTest" />
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.DiagnosticControllerTest" />
       <option name="METHOD_NAME" value="testUpdateDiagnosticResult_ValidationFailure" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -160,6 +140,15 @@
       <option name="presentableId" value="Default" />
       <updated>1733053661292</updated>
     </task>
+    <task id="LOCAL-00001" summary="ProjektIO">
+      <option name="closed" value="true" />
+      <created>1733151208221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733151208221</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,11 +171,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ProjektIO" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProjektIO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

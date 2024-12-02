@@ -1,4 +1,4 @@
-package service;
+package repository;
 
 import model.DiagnosticResult;
 import java.util.HashMap;

@@ -1,6 +1,7 @@
 package service;
 
 import model.DiagnosticResult;
+import repository.DiagnosticResultRepository;
 
 public class DiagnosticResultService {
 
