@@ -48,8 +48,12 @@ public class DiagnostikForm {
         String result;
 
         while (true) {
-            System.out.print("ID technika: ");
+            System.out.print("ID technika(lub wpisz 'exit' aby zakończyć): ");
             technicianId = scanner.nextLine();
+            if (technicianId.equalsIgnoreCase("exit")) {
+                System.out.println("Zakończono formularz diagnostyczny.");
+                return; // Zakończenie formularza
+            }
             if (!validateTechnicianId(technicianId)) {
                 System.out.println("Nieprawidłowe ID technika. Spróbuj ponownie.");
                 continue; // Powrót do początku pętli
@@ -112,7 +116,7 @@ public class DiagnostikForm {
         }
     }
 
-    private boolean validateTechnicianId(String technicianId) {
+    public boolean validateTechnicianId(String technicianId) {
         return technicianId != null && !technicianId.trim().isEmpty();
     }
 

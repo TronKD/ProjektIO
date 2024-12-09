@@ -3,7 +3,6 @@ package service;
 import model.DiagnosticResult;
 
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class DiagnosticReportPrinter {
 

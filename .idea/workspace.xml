@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f838ed5-078d-4592-a007-741e481f5c0b" name="Changes" comment="ProjektIO">
+      <change afterPath="$PROJECT_DIR$/src/test/java/unit/model/DiagnostikFormTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/unit/repository/DiagnosticRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DiagnosticController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/DiagnostikForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DiagnostikForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/DiagnosticController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DiagnosticController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DiagnosticReportPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DiagnosticReportPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/controller/DiagnosticControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/service/DiagnosticServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DiagnosticController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/DiagnostikForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DiagnostikForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/DiagnosticReportPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DiagnosticReportPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/controller/DiagnosticControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/service/DiagnosticServiceTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
       <list>
         <option value="module-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -47,6 +58,10 @@
     "JUnit.DiagnosticControllerTest.testAddDiagnosticResult.executor": "Run",
     "JUnit.DiagnosticControllerTest.testGetDiagnosticResult_NotFound.executor": "Run",
     "JUnit.DiagnosticControllerTest.testUpdateDiagnosticResult_ValidationFailure.executor": "Run",
+    "JUnit.DiagnosticRepositoryTest.executor": "Run",
+    "JUnit.DiagnosticRepositoryTest.testAddANDGetReportsForTicketId.executor": "Run",
+    "JUnit.DiagnosticRepositoryTest.testCzyMaRaportyDlaTicketId.executor": "Run",
+    "JUnit.DiagnosticRepositoryTest.testDodajIGetRaportyDlaTicketId.executor": "Run",
     "JUnit.DiagnosticServiceTest.executor": "Run",
     "JUnit.DiagnosticServiceTest.testCanCloseDiagnostic.executor": "Run",
     "JUnit.DiagnosticServiceTest.testDisplayCompletedReports.executor": "Run",
@@ -55,76 +70,69 @@
     "JUnit.DiagnosticServiceTest.testGetDiagnosticResult.executor": "Run",
     "JUnit.DiagnosticServiceTest.testPerformFullDiagnostic.executor": "Run",
     "JUnit.DiagnostikFormTest.executor": "Run",
+    "JUnit.DiagnostikFormTest.testGenerowanieDanychDiagnostycznych.executor": "Run",
+    "JUnit.DiagnostikFormTest.testRozpocznijFormularzDiagnostycznyBezIstniejącychRaportów.executor": "Run",
+    "JUnit.DiagnostikFormTest.testRozpocznijFormularzDiagnostycznyZIstniejącymiRaportami.executor": "Run",
     "JUnit.DiagnostikFormTest.testStartDiagnosticFormFullDiagnostic.executor": "Run",
     "JUnit.DiagnostikFormTest.testStartDiagnosticFormPartialDiagnostic.executor": "Run",
+    "JUnit.DiagnostikFormTest.testWalidacjaIDTechnika.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Leniu/IdeaProjects/ProjektIO_Konrad",
     "onboarding.tips.debug.path": "C:/Users/Leniu/IdeaProjects/untitled/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ServiceApp">
-    <configuration name="ServiceApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ServiceApp" />
-      <module name="ProjektIO_Konrad" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiagnosticServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="model" />
+      <recent name="repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.java in ProjektIO_Konrad">
+    <configuration name="DiagnosticRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit.service.*" />
+          <option name="PATTERN" value="unit.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unit.service" />
-      <option name="MAIN_CLASS_NAME" value="unit.service.DiagnosticServiceTest" />
+      <option name="PACKAGE_NAME" value="unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="unit.repository.DiagnosticRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiagnostikFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiagnosticRepositoryTest.testAddANDGetReportsForTicketId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit.model.*" />
+          <option name="PATTERN" value="unit.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unit.model" />
-      <option name="MAIN_CLASS_NAME" value="unit.model.DiagnostikFormTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiagnostikFormTest.testStartDiagnosticFormFullDiagnostic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjektIO_Konrad" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unit.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unit.model" />
-      <option name="MAIN_CLASS_NAME" value="unit.model.DiagnostikFormTest" />
-      <option name="METHOD_NAME" value="testStartDiagnosticFormFullDiagnostic" />
+      <option name="PACKAGE_NAME" value="unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="unit.repository.DiagnosticRepositoryTest" />
+      <option name="METHOD_NAME" value="testAddANDGetReportsForTicketId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiagnostikFormTest.testStartDiagnosticFormPartialDiagnostic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiagnostikFormTest.testGenerowanieDanychDiagnostycznych" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektIO_Konrad" />
       <extension name="coverage">
         <pattern>
@@ -134,19 +142,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="unit.model" />
       <option name="MAIN_CLASS_NAME" value="unit.model.DiagnostikFormTest" />
-      <option name="METHOD_NAME" value="testStartDiagnosticFormPartialDiagnostic" />
+      <option name="METHOD_NAME" value="testGenerowanieDanychDiagnostycznych" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiagnostikFormTest.testWalidacjaIDTechnika" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjektIO_Konrad" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit.model" />
+      <option name="MAIN_CLASS_NAME" value="unit.model.DiagnostikFormTest" />
+      <option name="METHOD_NAME" value="testWalidacjaIDTechnika" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in ProjektIO_Konrad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjektIO_Konrad" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServiceApp" />
-        <item itemvalue="JUnit.DiagnostikFormTest.testStartDiagnosticFormFullDiagnostic" />
-        <item itemvalue="JUnit.DiagnostikFormTest.testStartDiagnosticFormPartialDiagnostic" />
-        <item itemvalue="JUnit.DiagnostikFormTest" />
-        <item itemvalue="JUnit.DiagnosticServiceTest" />
+        <item itemvalue="JUnit.java in ProjektIO_Konrad" />
+        <item itemvalue="JUnit.DiagnosticRepositoryTest" />
+        <item itemvalue="JUnit.DiagnosticRepositoryTest.testAddANDGetReportsForTicketId" />
+        <item itemvalue="JUnit.DiagnostikFormTest.testWalidacjaIDTechnika" />
+        <item itemvalue="JUnit.DiagnostikFormTest.testGenerowanieDanychDiagnostycznych" />
       </list>
     </recent_temporary>
   </component>
